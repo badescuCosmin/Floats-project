@@ -1,0 +1,53 @@
+.section-about{
+    padding:18rem 5rem 10rem 5rem;
+    background-color: $background-main;
+    margin-top:-20vh;
+    @include respond(tab-port){
+        padding-bottom: 5rem; 
+    }
+    @include respond(phone){
+        padding:25rem 3rem 10rem 3rem;
+    }
+}
+.section-tours{
+    padding:5rem 5rem;
+    background-color: $background-main;
+    @include respond(tab-port){
+        padding: 0 5rem;
+     }
+}
+.section-booking{
+    padding:10rem 5rem 15rem 5rem;
+    background-color: $background-main;
+    @include respond(tab-port){
+        padding: 5rem 5rem 10rem 5rem;
+     }
+     @include respond(phone){
+        padding:10rem 3rem 10rem 3rem;  
+    }
+}
+.book{
+    background-image: linear-gradient(110deg, rgba($color-white, .8) 0%, rgba($color-white, .8) 50%,  transparent 50%,  transparent 100%),
+    url("../img/home1.jpg");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width:100%;
+    box-shadow: 0 1rem 2rem rgba($color-black, .5);
+    border-radius: 3px;
+    padding:4rem 0;
+   &__form{
+       width:50%;
+   }
+   @include respond(phone){
+    background-image: linear-gradient(110deg, rgba($color-white, .8) 0%, rgba($color-white, .8) 60%,  transparent 60%,  transparent 100%),
+    url("../img/home1.jpg");
+    &__form{
+        width:60%;
+    }
+}
+}
+.section-reviews {
+    padding: 4rem;
+    background-color: $background-main;
+}

@@ -1,0 +1,75 @@
+.collection {
+    position: relative;
+      &__photo{
+          width:75%;
+          box-shadow: 0 1.5rem 4rem rgba($color-black, .4);
+          border-radius: 2px;
+          position: absolute;
+          z-index:10;
+          transition: all .2s;
+          outline-offset: 1rem;  
+          @include respond(tab-port){
+              float:left;
+              position:relative;
+              width:50%;
+              box-shadow: 0 1.5rem 4rem rgba($color-black, .4);
+          }
+          &--p1 {
+              left:0;
+              top:0rem;
+              @include respond(tab-port){
+                top:0;  
+            }   
+          }
+          &--p2 {
+              left:0;
+              top:6rem;
+              @include respond(tab-port){
+                top:0;
+            }
+          }
+          &--p3 {
+              left:0;
+              top:12rem;
+              @include respond(tab-port){
+                top:0;
+            }
+          }
+          &--p4 {
+            left:0;
+            top:18rem;
+            @include respond(tab-port){
+                top:0;
+            }
+           } 
+
+           &--p5 {
+            left:0rem;
+            top:24rem;
+            @include respond(tab-port){
+                top:0;
+            }
+           }
+           &--p6 {
+            left:0rem;
+            top:31rem;
+             @include respond(tab-port){
+                top:0;
+            }
+           }
+          &:hover  {
+              outline: .5rem solid $color-primary-dark;
+              transform: scale(1.25) translateY(-.5rem) translateX(1rem);
+              box-shadow: 0 2.5rem 4rem rgba($color-black, .8);
+              z-index:20;
+              @include respond(tab-port){
+               transform: rotate(15deg);
+            }
+          }
+        }
+        &:hover &__photo:not(:hover){
+            transform: scale(.90);
+        }
+    }
+
+      

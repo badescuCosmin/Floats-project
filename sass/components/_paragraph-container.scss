@@ -1,0 +1,20 @@
+.paragraph-container{
+    background-image: linear-gradient(to right bottom, rgba($color-primary-light, 0.9), rgba($color-primary-dark, 0.9)), url("../img/peles.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    box-shadow: 0 1rem 2rem rgba($color-black, .4);
+    position: relative;
+    padding: 10rem 2rem;
+    &__paragraph{
+        color:$color-black;
+        font-weight: 700;
+        font-size:1.1rem;
+    }
+    &__icon{
+        position: absolute;
+        top:10rem;
+        left:.6rem;
+        color:$color-primary-dark;
+    }
+}

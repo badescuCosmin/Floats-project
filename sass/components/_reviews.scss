@@ -1,0 +1,60 @@
+.review {
+    position: relative;
+    &::after{
+        content:"";
+        clear:both;
+        display: table;
+    }
+    &:not(:last-child){
+        margin-bottom: 4rem;
+    }
+    h1 {
+        margin-bottom: 1.3rem;
+        font-style: italic;
+    }
+    width: 80%;
+    @include respond(phone){
+        width: 100%;
+    }
+    margin: 0 auto;
+    background-color: #fff;
+    padding:3rem;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0, .2);
+    border-radius: 3px;
+    &__img {
+        width: 6rem;
+        height: 6rem;
+        border-radius: 50%;    
+    }
+    &__container {
+        display: inline-block;
+        text-align: center;  
+    }
+    &__paragraph {   
+        margin-left: 1rem; 
+        float: right;
+        width: calc(100% - 7rem);
+        margin-top: 1%;
+    }
+    &__name {
+        opacity:0;
+        transform: translateY(-3rem);
+        transition: all .3s;
+    }
+    &:hover &__name {
+        opacity:1;
+        transform: translateY(-.5rem);
+    }
+    &::before {
+        content:"\201C";
+        position: absolute;
+        top: -.5rem;
+        left: -.3rem;
+        font-size: 8rem;
+        color: var(--color-grey-light-2);
+        font-family: sans-serif;
+        line-height: 1;
+        z-index: 1;
+        opacity: .4;
+    }
+}
